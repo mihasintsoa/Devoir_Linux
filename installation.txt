@@ -1,0 +1,39 @@
+---------------APACHE-------------
+
+Download apache tar.gz, apr.tar.gz, apr-util.tar.gz, pcre.tar.gz, expat.tar.gz
+extract apr, apr-util, pcre,expat(make sure that they are within the same directory)
+
+extract apache then enter the directory create after extracting apache
+
+use:.configure --prefix=usr/local/apache2 --with-included-apr(you aren't force to precise the path to install it 'cause the default path is "/usr/local/apache2"
+->make
+->sudo make install
+
+
+-------------------PHP-------------------
+Download php
+tar -xzf php.tar.gz
+cd php-{veersion} (directory after extracting php archive) 
+sudo apt install -y pkg-config build-essential autoconf bison re2c \
+                        libxml2-dev libsqlite3-dev (if not install)
+./buildconf
+./configure
+
+----->if you encounter a problem that's probably you don't have the libxml2 and sqlite3<---
+->make
+->sudo sudo make install
+
+
+
+---------------MySql---------------
+
+Download mysql tar.gz
+tar -xzf mysql.tar.gz
+cd mysql-{version}
+mkdir build
+cd build
+->cmake ..
+->make
+->sudo make install
+
+
